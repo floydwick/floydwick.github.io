@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: 000000;
+    background-image: url("tartan.png");
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+h1 {
+  padding-top: 50px;
+  border-bottom: 1px solid rgb(10, 30, 150);
+  height: 100px;
+  background: linear-gradient(to right, black, midnightblue, black);
+background-color: ;
+  color: ffffff;
+}
+
+.btn-group button {
+  background-color: rgb(5, 3, 3);
+  border: 1px solid rgb(10, 30, 150);
+  color: white;
+  padding: 10px 0px;
+  float: left;
+  cursor: crosshair;
+  position:;
+}
+
+.btn group button:not(last-child){
+  border-right: none;
+}
+
+.btn-group button:hover {
+  background-color:midnightblue;
+}
+
+h3 {
+    color: ffffff;
+}
+p {
+    color: white;
+}
+
+div.polaroid {
+    width: 70%;
+    background-color:black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: px;
+}
+
+img-2 {
+    border-radius: 0%;
+}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* unvisited link */
+a:link {
+   color: FFFFFF;
+   text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+   color: green;
+   text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+   color: hotpink;
+   text-decoration: none;
+}
+
+/* selected link */
+a:active {
+   color: blue;
+   text-decoration: none;
+}
