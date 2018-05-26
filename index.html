@@ -1,78 +1,101 @@
 <head>
- <link rel="stylesheet" href="css.css">
+ <link rel="stylesheet" href="2.css">
 </head>
-
-<h1> <center>Hello for reals</center> </h1>
-
-<center>
-<div class="btn-group" style="width: 100%">
- <button style="width: 33.3%">Us being goofs</button>
- <button style="width: 33.3%">Button 2</button>
- <button style="width: 33.3%">Button 3</button>
-</div>
-</center>
-
-
 <br>
-<br>
-
-<body>
-<h3>
-<center>  Hello </center>
-</h3>
-</body>
-<center>
+<h1> <center>Floydwick: Random Selections</center>
+</h1>
+<center><font color="white"> More to come, soon! I promise!
+  <p>
+    For now, check out these randos.
 
 
-  <style>
-  .containerTEXT {
-      position: relative;
-      width: 50%;
-  }
+<!-- Container for the image gallery -->
+<div class="container">
 
-  .image {
-    opacity: 1;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+      <center><img src="chan.png" style="height:100%"></center>
+  </div>
 
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+      <center><img src="grl.png" style="height:100%"></center>
+  </div>
 
-  .containerTEXT:hover .image {
-    opacity: 0.3;
-  }
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+      <center><img src="merm3.png" style="height:100%"></center>
+  </div>
 
-  .containerTEXT:hover .middle {
-    opacity: 1;
-  }
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+      <center><img src="colossus.jpg" style="height:100%"></center>
+  </div>
 
-  .text {
-    color: Black;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+      <center><img src="froggie.jpg" style="height:100%"></center>
+  </div>
 
-  img{
-      border-radius: 50%;
-  }
-  </style>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
 
-
-
-  <div class="containerTEXT">
-    <img src="queereon.PNG" alt="Avatar" class="image" style="width:100%">
-    <div class="middle">
-      <div class="text"><a href="1.html">Click for dOOdles</a></div>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="chan_thumb.png" style="width:100%" onclick="currentSlide(1)" alt="Chan <3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="grl_thumb.png" style="width:100%" onclick="currentSlide(2)" alt="Nice Weather for the beach!">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="merm3_thumb.png" style="width:100%" onclick="currentSlide(3)" alt="M3rmz">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="colossus_thumb.PNG" style="width:100%" onclick="currentSlide(4)" alt="Colossus, daddy">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="froggie_thumb.PNG" style="width:100%" onclick="currentSlide(5)" alt="Frogs for Lizzie!">
     </div>
   </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
