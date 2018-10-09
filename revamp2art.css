@@ -41,6 +41,7 @@ div.container {
 }
 
 button {
+
   float: right;
   width: 60px;
   height: 60px;
@@ -49,10 +50,11 @@ button {
   border-radius: 50%;
   color: white;
   cursor: crosshair;
-  margin: 3;
+  margin: 5;
 }
 
 button.alt {
+
   float: right;
   width: 60px;
   height: 60px;
@@ -61,11 +63,29 @@ button.alt {
   border-radius: 50%;
   color: navy;
   cursor: crosshair;
-  margin: 3;
+  margin: 5;
+}
+
+button.alt2 {
+
+  float: right;
+  width: 60px;
+  height: 60px;
+  background-color: #00FF7F;
+  border: 2px solid rgb(2, 8, 31);
+  border-radius: 50%;
+  color: red;
+  cursor: crosshair;
+  margin: 5;
 }
 
 button:hover {
   background-color: #ffc701;
+}
+
+button.alt2:hover {
+  background-color: #FF00FF;
+  color: yellow;
 }
 
 .img-me {
